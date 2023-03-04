@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 要求当前网页使用IE浏览器最高版本的内核来渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=egde">
+    <!-- 视口的设置:视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
+    <!-- [if lt IE 9] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <!-- 解决了IE9以下浏览器对HTML5新增标签不识别，并导致CSS不起作用的问题 -->
+    <!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> -->
+    <!-- <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
+    <!-- [endif] -->
+    <title>个人登录 | 欢迎光临黑猫杂货铺!</title>
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入index文件 -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- 引入公共的样式文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入icofont文件 -->
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <script src="js/login.js"></script>
+    <script src="js/jQuery.min.js"></script>
+</head>
+
+<body>
+<div class="w">
+    <header>
+        <div class="login_logo">
+            <a href="/BlackCatShop" title="黑猫杂货铺"><img src="images/orange-duola.png" alt="我的图图呢"></a>
+        </div>
+    </header>
+    <div class="loginArea">
+        <div class="loginHeader"><h3>登录</h3>
+            <span class="register">未有账号，点击<a href="register.html">注册</a></span>
+        </div>
+        <div class="login_form">
+            <form action="/BlackCatShop/user/login" method="post" id="user_login">
+                <ul>
+                    <li id="usernameLine"><label for="username">账号：</label>
+                        <div class="con"></div>
+                        <input type="text" class="inp" id="username" placeholder="请输入账号"
+                               name="username">
+                    </li>
+                    <li><label for="pwd">登录密码：</label>&nbsp;<input type="password" class="inp" placeholder="请输入密码" id="pwd" name="password" autocomplete="">
+                        <span class="psw_show_hide">&#xe902;</span>
+                    </li>
+                    <li><label for="verified_code">验证码：</label>
+                        <input type="text" class="inp" id="verified_code" placeholder="请输入验证码"
+                               name="verificationCode">
+                        <span class="success  gapPrompt">&#xe9eb; 验证码正确</span>
+                    </li>
+
+                    <li class="login_btn">
+                        <div class="btn">登录</div><span class="agree"><input type="checkbox" name="directlySignIn" id="checkProtocol" value="1"><label for="checkProtocol"> 七天内免登录</label></span>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- 底部模块的开始 -->
+<div class="footer register_foot">
+    <div class="w">
+        <div class="mod_copyright">
+            <div class="links">
+                联系电话:19115104446
+                &nbsp;&nbsp;
+                联系邮箱：lzo2511977838@163.com
+            </div>
+            <div class="copyright">
+                Copyright © 2021 - 2023 云梦YM.com 版权所有<br /> 最终解释权归云梦公司所有
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<!-- 底部模块的结束 -->
+</body>
+
+</html>

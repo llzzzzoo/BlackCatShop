@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑猫杂货铺 - 购物车</title>
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入公共的样式文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入CSS文件 -->
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <!-- 引入js文件 -->
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/shoppingCart.js"></script>
+    <script src="js/animate.js"></script>
+    <!-- 引入icofont文件 -->
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="style_white">
+        <!-- 快捷导航模块开始 -->
+        <section class="shortcut">
+            <div class="w">
+                <div class="fl">
+                    <ul>
+                        <li> <span class="time_compliment">早上好呀</span>，欢迎光临黑猫杂货铺！&nbsp;&nbsp;</li>
+                    </ul>
+                </div>
+                <div class="fr">
+                    <ul class="r_nav">
+                        <li style="display: none" id="user-message">
+                            <div class="droplist">
+                                <a href="#" class="arrow-icon" id="nickname">Lzo</a>
+                                <div class="pull-down" id="user-pull-down">
+                                    <div class="white-block"></div>
+                                    <div class="content" id="user-content">
+                                        <ul>
+                                            <a href="#" class="style_touch_blue">
+                                                <li><span>个人中心</span></li>
+                                            </a>
+                                            <a href="#" class="style_touch_blue">
+                                                <li><span>发布商品</span></li>
+                                            </a>
+                                            <a href="/BlackCatShop/user/exit" class="style_touch_blue">
+                                                <li><span>退出登录</span></li>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li>
+                            <div class="droplist">
+                                <a href="#" class="arrow-icon">消息</a>
+                                <div class="pull-down">
+                                    <div class="white-block"></div>
+                                    <div class="content">
+                                        <ul>
+                                            <a href="#" class="style_touch_blue">
+                                                <li><span>回复我的</span></li>
+                                            </a>
+                                            <a href="#" class="style_touch_blue">
+                                                <li><span>收到的赞</span></li>
+                                            </a>
+                                            <a href="#" class="style_touch_blue">
+                                                <li><span>系统消息</span></li>
+                                            </a>
+                                            <a href="#" class="style_touch_blue">
+                                                <li><span>我的消息</span></li>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li><a href="#" class="style_touch_blue style_touch_up">关注</a></li>
+                        <li></li>
+                        <li><a href="#" class="style_touch_blue style_touch_up">收藏</a></li>
+                        <li></li>
+                        <li><a href="#" class="arrow-icon">历史</a></li>
+                        <li></li>
+                        <li><a href="#" class="style_touch_blue style_touch_up">我的会员</a></li>
+                        <li></li>
+                        <li><a href="#" class="style_touch_blue style_touch_up">联系客服</a></li>
+                    </ul>
+                </div>
+                </div>
+        </section>
+        <div style="clear:both;"></div>
+
+        <!-- 快捷导航模块结束 -->
+
+        <!-- header头部模块开始 -->
+        <header class="header w">
+            <!-- logo模块 -->
+            <div class="logo">
+                <h1>
+                    <a href="/BlackCatShop" title="黑猫杂货铺">黑猫杂货铺</a>
+                </h1>
+            </div>
+            <!-- search模块 -->
+            <div class="search">
+                <label for="searchInput"></label><input type="search" name="" id="searchInput" value="">
+                <button></button>
+            </div>
+        </header>
+        <div style="clear:both;"></div>
+        <!-- header头部模块结束 -->
+    </div>
+    <div style="clear:both;"></div>
+    <!-- nav导航模块结束 -->
+
+    <!-- 购物车内容模块开始 -->
+    <div class="cart-body">
+        <div class="w">
+            <div class="cart">
+                <div class="cart-filter-bar">
+                    <span class="switch-cart">全部商品（全部）</span>
+                    <div class="cart-sum">
+                        <span>总价（不含运费）</span>
+                        <strong class="price">￥0.00</strong>
+                        <a href="javascript:void(0);" id="topCartSubmit" class="style_touch_deepblue submit-button">结算</a>
+                    </div>
+                </div>
+                <div class="cart-main">
+                    <div class="cart-table-th">
+                        <div class="column t-checkbox">
+                            <div class="select-All">
+                                <div class="checkedbox">
+                                    <label for="selectAllBoxUp"></label><input type="checkbox" class="select-AllBox" id="selectAllBoxUp">
+                                </div>
+                                全选
+                            </div>
+                        </div>
+                        <div class=" column t-goods">
+                            <div class="td-inner">商品</div>
+                        </div>
+                        <div class="column t-info">&nbsp;</div>
+                        <div class="column t-price">单价</div>
+                        <div class="column t-quantity">数量</div>
+                        <div class="column t-sum">金额</div>
+                        <div class="column t-action">操作</div>
+                    </div>
+                </div>
+                <div class="itemList"></div>
+                <div class="float-bar-holder">
+                    <div class="float-bar">
+                        <div class="float-bar-wrapper">
+                            <div class="slecet-All select-All2">
+                                <div class="checkedbox">
+                                    <label for="selectAllBoxButton"></label><input type="checkbox" class="select-AllBox" id="selectAllBoxButton">
+                                </div>
+                                全选
+                            </div>
+                            <div class="operation">
+                                <a href="#" class="style_touch_deepblue">移入收藏夹</a>
+                                <a href="javascript:void(0);" class="remove-itemChecked style_touch_deepblue">删除</a>
+                            </div>
+                            <div class="float-bar-right">
+                                <div class="selected-num">
+                                    <span>已选商品</span>
+                                    <em id="selectedItemsCount">0</em>
+                                    <span>件</span>
+                                </div>
+                                <div class="pipe"></div>
+                                <div class="cart-sum">
+                                    <span>总价（不含运费）</span>
+                                    <strong class="price">￥0.00</strong>
+                                    <a href="javascript:void(0);" id="bottomCartSubmit" class="style_touch_deepblue submit-button">结算</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购物车内容模块结束 -->
+    <!-- 电梯导航开始 -->
+    <div class="elevator">
+        <ul class="elevator_list">
+            <li class="elevator_item comebackTop">
+                <a href="javascript:void(0);" class="style_touch_blue elevator_item_content">
+                    <span class="comeTop_icon"></span>
+                    <div class="slider_bar">回到顶部</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 电梯导航结束 -->
+    <!-- 底部模块的开始 -->
+    <div class="footer">
+        <div class="w">
+            <div class="mod_service">
+                <ul>
+                    <li>
+                        <h5></h5>
+                        <div class="service_text">
+                            <h4>送货上门</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <div class="service_text">
+                            <h4>跨国运输</h4>
+                            <p>云梦速递，使命必达</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <div class="service_text">
+                            <h4>云端备份</h4>
+                            <p>双重保险，无忧购物</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <div class="service_text">
+                            <h4>售后保障</h4>
+                            <p>全天等候，为您服务</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="mod_help">
+                <dl>
+                    <dt>服务指南</dt>
+                    <dd><a href="#" class="style_touch_blue">关于我们</a></dd>
+                    <dd><a href="#" class="style_touch_blue">联系我们</a></dd>
+                    <dd><a href="#" class="style_touch_blue">用户协议</a></dd>
+                    <dd><a href="#" class="style_touch_blue">加入我们</a></dd>
+                </dl>
+                <dl>
+                    <dt>传送门</dt>
+                    <dd><a href="#" class="style_touch_blue">协议汇总</a></dd>
+                    <dd><a href="#" class="style_touch_blue">配送方式</a></dd>
+                    <dd><a href="#" class="style_touch_blue">活动专题页</a></dd>
+                    <dd><a href="#" class="style_touch_blue">侵权申诉</a></dd>
+                </dl>
+                <dl>
+                    <dt>活动中心</dt>
+                    <dd><a href="#" class="style_touch_blue">帮助中心</a></dd>
+                    <dd><a href="#" class="style_touch_blue">社区中心</a></dd>
+                    <dd><a href="#" class="style_touch_blue">MCN管理中心</a></dd>
+                    <dd><a href="#" class="style_touch_blue">名人堂</a></dd>
+                </dl>
+                <dl>
+                    <dt>售后服务</dt>
+                    <dd><a href="#" class="style_touch_blue">售后政策</a></dd>
+                    <dd><a href="#" class="style_touch_blue">价格保护</a></dd>
+                    <dd><a href="#" class="style_touch_blue">退款说明</a></dd>
+                    <dd><a href="#" class="style_touch_blue">取消订单</a></dd>
+                </dl>
+                <dl>
+                    <dt>特色服务</dt>
+                    <dd><a href="#" class="style_touch_blue">壁纸站</a></dd>
+                    <dd><a href="#" class="style_touch_blue">广告合作</a></dd>
+                    <dd><a href="#" class="style_touch_blue">高级弹幕</a></dd>
+                    <dd><a href="#" class="style_touch_blue">品牌号官网</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd><img src="upload/sleep-leimu.png" alt=""></dd>
+                    叫醒客服端
+                </dl>
+            </div>
+            <div class="mod_copyright">
+                <div class="links">
+                    联系电话:19115104446
+                    &nbsp;&nbsp;
+                    联系邮箱：lzo2511977838@163.com
+                </div>
+                <div class="copyright">
+                    Copyright © 2021 - 2023 云梦YM.com 版权所有<br /> 最终解释权归云梦公司所有
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+    <!-- 底部模块的结束 -->
+</body>
+
+</html>

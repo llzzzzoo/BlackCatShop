@@ -1,0 +1,195 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 84px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+body .register_foot {
+    height: 180px;
+}
+
+.login_logo img {
+    width: 83px;
+    height: 83px;
+}
+
+.loginArea {
+    height: 390px;
+    border: 1px solid #e5e5e5;
+    margin-top: 20px;
+    background-color: #ffffff;
+    margin-bottom: 85px;
+}
+
+.loginArea .loginHeader{
+    height: 42px;
+    border-bottom: 1px solid #d6d6d6;
+    line-height: 42px;
+    padding: 0 15px;
+}
+
+.loginArea h3 {
+    display: inline;
+}
+
+.register {
+    float: right;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.register a {
+    color: #01a7de;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+.login_form {
+    width: 600px;
+    margin-top: 50px;
+    margin-left: 357px;
+}
+
+.login_form ul li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.login_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.login_form ul li .agree label{
+    width: 100px;
+}
+
+.login_form ul li .con {
+    display: none;
+    position: absolute;
+    bottom: 46px;
+    left: 91px;
+    border: 1px solid rgba(200, 211, 212, .4);
+    box-shadow: 2px 2px 4px #d2d3d4;
+    border-radius: 3px;
+    background-color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 4px;
+    padding-left: 5px;
+    padding-right: 8px;
+    color: #333;
+}
+
+.login_form ul li .con::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 28px;
+    left: 8px;
+    border: 8px;
+    border-style: solid solid solid;
+    border-color: #fff transparent transparent;
+    z-index: 1;
+}
+
+/* before和after两个伪元素的作用就是搞一个三角形边框 */
+/* 原理也很简单，小三角形覆盖大三角形，边框不一样大，大三角形漏出来的一部分换个色就可以当做小三角形的边框 */
+
+.login_form ul li .con::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 28.5px;
+    left: 7px;
+    border: 9px;
+    border-style: solid solid solid;
+    border-color: #dadbdc transparent transparent;
+}
+
+.login_form ul li .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 2px;
+}
+
+.login_form .progress_bar span {
+    position: absolute;
+    left: 20px;
+    top: 2.5px;
+}
+
+.login_form .psw_show_hide{
+    position: absolute;
+    height: 37px;
+    line-height: 37px;
+    top: 0;
+    left: 296px;
+    font-family: "icomoon", serif;
+    font-size: 28px;
+    color: #75758b;
+    user-select:none;
+    cursor: pointer;
+}
+
+.error {
+    font-family: "icomoon", sans-serif;
+    color: #fa5a57;
+    font-size: 14px;
+}
+
+.gapPrompt {
+    margin-left: 12px;
+}
+
+.success {
+    font-family: "icomoon", sans-serif;
+    color: #2ba833;
+    font-size: 14px;
+}
+
+.btn {
+    width: 200px;
+    height: 34px;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 106px;
+    /* 清除一下边框，不然不好看 */
+    border: 0;
+    border-radius: 6px;
+    line-height: 34px;
+    text-align: center;
+    background-color: #0fa3d6;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: .8;
+}
+
+.login_btn {
+    position: relative;
+}
+
+.agree {
+    position: relative;
+    top: -28px;
+    left: 352px;
+}
+
+.agree input {
+    vertical-align: middle;
+}

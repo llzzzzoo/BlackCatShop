@@ -1,0 +1,461 @@
+.header {
+    height: 105px;
+}
+
+.logo {
+    top: 7px
+}
+
+.logo a {
+    background: url(../images/cuteSmile-miku.png) no-repeat;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+em {
+    font-style: normal;
+}
+
+.search {
+    position: absolute;
+    top: 35px;
+    left: 688px;
+    height: 35px;
+    width: 422px;
+    border: 1px solid #cccccc;
+    padding-left: -2px;
+    border-radius: 2px;
+}
+
+.search input {
+    width: 370px;
+}
+
+.search button {
+    width: 50px;
+}
+
+.gap{
+    background-color: #ffffff;
+    height: 22px;
+}
+
+.nowrap{
+    display: inline-block;
+    text-decoration: inherit;
+    white-space: nowrap;
+}
+
+.goods-info{
+    /*margin: 20px 0 0;*/
+    background-color: #ffffff;
+}
+
+.goods-info-previewWrap{
+    float: left;
+    width: 350px;
+    background-color: #ffffff;
+}
+
+.goods-info-previewWrap .spec-image{
+    width: 330px;
+    min-height: 280px;
+    vertical-align: bottom;
+}
+
+.goods-info-previewWrap .preview_img{
+    position:relative;
+    /*图片宽度固定为330px*/
+    width: 330px;
+}
+
+.goods-info-previewWrap .mask{
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 150px;
+    height: 150px;
+    background-color:#8bb2d3;
+    opacity: .4;
+    border: 1px solid #ccc;
+    cursor: move;
+}
+
+.goods-info-previewWrap .big{
+    display: none;
+    position:absolute;
+    top:0;
+    left: 332px;
+    width: 300px;
+    height:300px;
+    border:1px solid #ccc;
+    overflow:hidden;
+    z-index: 9999;
+}
+
+.goods-info-previewWrap .bigImg{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 800px;
+}
+
+.goods-info .goods-infos-wrap .goods-info-content{
+    float: left;
+    width: 850px;
+    min-height: 550px;
+    background-color: #ffffff;
+    font-family: "PingHei","Helvetica Neue","Helvetica","Arial","Verdana",sans-serif;
+}
+
+.goods-info-content .goods-details .goods-name h2{
+    float: left;
+    width: 50%;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+.goods-info-content .goods-quantity {
+    float: left;
+    width: 86px;
+    margin-left: 40px;
+}
+
+.goods-info-content .goods-quantity .number button {
+    float: left;
+    border: 1px;
+    background-color: #ffffff;
+    width: 20px;
+    height: 36px;
+    line-height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.goods-info-content .goods-quantity .number .number-downIcon::before {
+    content: "\ea0b";
+    font-family: "icomoon", sans-serif;
+    font-size: 12px;
+}
+
+.goods-info-content .goods-quantity .number .number-addIcon::before {
+    content: "\ea0a";
+    font-family: "icomoon", sans-serif;
+    font-size: 12px;
+}
+
+.goods-info-content .goods-quantity .number .goods-input-o {
+    float: left;
+    width: 46px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-bottom: 2px solid #d2d2d7;
+    /* 内容根据边框调整大小 */
+    box-sizing: border-box;
+    outline: none;
+    font-size: 24px;
+}
+
+.goods-info-content .goods-price{
+    float: right;
+    width: 280px;
+    font-family: "PingHei","Helvetica Neue","Helvetica","Arial","Verdana",sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.goods-info-content .item-child{
+    border-top: 1px solid #d2d2d7;
+    float: left;
+    width: 850px;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "PingHei","Helvetica Neue","Helvetica","Arial","Verdana", sans-serif;
+}
+
+.goods-info-content .colornav-items{
+    display: inline-block;
+    list-style: none;
+    margin: 0 66px;
+    padding-top: 6px;
+}
+
+.goods-info-content .colornav-item{
+    float: left;
+    margin: 4px 5px 4px 0;
+}
+
+.goods-info-content .colornav-link{
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #1d1d1f;
+    cursor: pointer;
+    float: left;
+    padding: 3px;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    z-index: 1;
+}
+
+.goods-info-content .colornav-color-type{
+    margin-left: 14px;
+}
+
+.goods-info-content .colornav-swatch{
+    background: #f5f5f7 50%;
+    border-radius: 50%;
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.colornav-swatch:after{
+    border-radius: inherit;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+    content: "11";
+    display: block;
+    height: inherit;
+    position: absolute;
+    width: inherit;
+}
+
+.goods-info-content .colornav-label{
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: inset(0 0 99.9% 99.9%);
+    clip-path: inset(0 0 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+.goods-info-content .colornav-value{
+    position: absolute;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: inset(0 0 99.9% 99.9%);
+    clip-path: inset(0 0 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+
+.goods-info-content .form-selector{
+    position: relative;
+    float: left;
+    color: #1d1d1f;
+    border-color: #d2d2d7;
+    background-color: hsla(0,0%,100%,.8);
+    width: 46%;
+    margin-top: 10px;
+    margin-left: 28px;
+}
+
+/*这里优先级不能太高，不然会覆盖选中的颜色*/
+.goods-info-content .form-selector-label:hover{
+    border-color: #1d1d1f;
+}
+
+.rf-bfe-selector-left-col{
+    flex-basis: 60%;
+    max-width: 60%;
+    padding-right: 3%;
+}
+
+.form-selector-label .form-selector-right-col{
+    position: relative;
+    align-self: center;
+    text-align: right;
+}
+
+.goods-info-content .form-selector-input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+.form-selector-label {
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: "PingHei","Helvetica Neue","Helvetica","Arial","Verdana", sans-serif;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d2d2d7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    min-height: 4.88235rem;
+}
+
+.form-selector-label:lang(zh){
+    line-height: 1.35296;
+    letter-spacing: 0;
+}
+
+.form-selector-label .form-label-small{
+    display: block;
+    margin-top: .23529rem;
+}
+
+.form-label-small{
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: "PingHei","Helvetica Neue","Helvetica","Arial","Verdana",sans-serif;
+    color: #1d1d1f;
+    margin-top: 0.23529rem;
+}
+
+.rf-bfe-selector-right-col{
+    flex-basis: 40%;
+    max-width: 40%;
+}
+
+.form-label-small .price-point-rate{
+    display: none;
+}
+
+.price-point+.price-point{
+    display: block;
+}
+
+.form-label-small:lang(zh){
+    letter-spacing: 0;
+}
+
+.form-selector .form-selector-input:checked~.form-selector-label{
+    border-color: #0071e3;
+    outline: none;
+    border-width: 2px;
+    padding: 14px;
+}
+
+.form-selector-label .form-selector-left-col {
+    position: relative;
+    align-self: center;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.cart-button .addtocart .button{
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-left: 20px;
+    color: #fff;
+    font-family: "PingFang SC",miui,system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+    background-color: #0071e3;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: 0;
+}
+
+.button-block{
+    float: right;
+    box-sizing: border-box;
+    display: block;
+    width: 25%;
+    border-radius: 8px;
+    margin-right: 42px;
+}
+
+.comebackTop {
+    display: none;
+}
+
+.elevator {
+    position: absolute;
+    top: 300px;
+    right: 80px;
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.elevator_fixed {
+    position: fixed;
+    top: 77px;
+}
+
+.elevator_item:hover {
+    background-color: #f0f0f0;
+}
+
+.elevator .elevator_item_content,
+.slider_bar {
+    position: relative;
+    display: block;
+    width: 58px;
+    height: 58px;
+    line-height: 19px;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+
+.comebackTop .comeTop_icon {
+    font-family: "icomoon", sans-serif;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    z-index: 3;
+}
+
+.comebackTop .slider_bar {
+    display: none;
+    /* 这个定位和top/left的值的设置相当于让这个盒子跟span的右侧完全对齐 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #ffffff;
+}
+
+.footer{
+    background-color: #f5f5f7;
+    margin-top: 80px;
+}
