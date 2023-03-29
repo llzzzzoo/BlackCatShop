@@ -188,6 +188,7 @@ body .register_foot {
     position: relative;
     top: -28px;
     left: 352px;
+   user-select:none;
 }
 
 .agree input {
