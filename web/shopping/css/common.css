@@ -93,10 +93,6 @@
     margin: 10px 15px 0;
 }
 
-.shortcut .fr ul li {
-    cursor: pointer;
-}
-
 .shortcut .fr ul li .pull-down {
     display: none;
     position: absolute;
